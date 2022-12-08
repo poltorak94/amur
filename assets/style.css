@@ -825,6 +825,7 @@ p {
 
 .category {
     padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .category__title {
