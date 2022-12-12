@@ -1,5 +1,6 @@
 $(document).ready(function () {
 
+    //слайдер на главной
     var swiper = new Swiper(".parts-slider", {
         slidesPerView: 4,
         spaceBetween: 20,
@@ -9,31 +10,91 @@ $(document).ready(function () {
             prevEl: ".arrow-link--left",
         },
     });
+
     //видеоплеер ютуб
-    // $('.production__video-play').on('click', function (e) {
-    //     e.preventDefault();
-    //     let container = $(this).closest('.production__vedio-holder');
-    //     container.find('.prodaction__video-holder-image').hide()
-    //     container.find('.production__video-iframe').show();
-    //     $(this).hide();
-    //     let video = container.find('.production__video-iframe');
-    //     let videoURL = video.prop('src');
-    //     videoURL += "&autoplay=1";
-    //     video.prop('src', videoURL);
+    $('.video-item__play').on('click', function (e) {
+        e.preventDefault();
+        let container = $(this).closest('.video__item-container');
+        container.addClass('video__item-container--active');
+        container.find('.video__item-overlay').hide()
+        container.find('.video__item-src').show();
+        $(this).hide();
+        let video = container.find('.video__item-src');
+        let videoURL = video.prop('src');
+        videoURL += "&autoplay=1";
+        video.prop('src', videoURL);
+    })
 
-    // })
+    //якорь на странице товара
+    $('.product__all-option').on('click', function (e) {
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: $('.product__all-options').offset().top - 50
+        }, 700)
+    });
 
+    //табы контактов
+    $('.contacts__tab-title').on('click', function () {
+        let container = $(this).closest('.contacts__tab');
+        if (container.hasClass('contacts__tab--active')) {
+            container.removeClass('contacts__tab--active');
+        } else {
+            container.addClass('contacts__tab--active');
+        }
+    })
+    //карта
+    if ($('*').is('#map')) {
+        var myMap;
 
+        ymaps.ready(init);
 
-    //энциклопедя фикc меню
-    // let stickyOffset = $('.handbook-nav--fix').offset().top;
+        function init() {
+            var myMap = new ymaps.Map('map', {
+                center: [50.275889, 127.567410],
+                zoom: 13
+            }, {
+                searchControlProvider: 'yandex#search'
+            }),
+                myPlacemark = new ymaps.Placemark([50.275889, 127.567410], {
+                })
+            myMap.geoObjects
+                .add(myPlacemark)
+        }
+    }
+    //маска
+    $('.input-tel').mask('+7 (999) 999-99-99');
 
-    // $(window).scroll(function () {
-    //     let sticky = $('.handbook-nav--fix'),
-    //         scroll = $(window).scrollTop();
+    //модальные окна
+    $('.callback-modal, .footer-callback').on('click', function (e) {
+        e.preventDefault();
+        $('.modal-callback').trigger('open.modal')
+    })
+    $('.hero__button, .product__callback ').on('click', function (e) {
+        e.preventDefault();
+        $('.modal-order').trigger('open.modal')
+    })
 
-    //     if (scroll >= stickyOffset) sticky.addClass('fixed');
-    //     else sticky.removeClass('fixed');
-    // });
+    $('.modal').on('open.modal', function () {
+        let modal = $(this)
+        modal.removeClass('modal--hidden');
+        modal.arcticmodal({
+            afterClose: function () {
+                modal.addClass('modal--hidden');
+            }
+        });
+    });
+
+    $('.modal-submit').on('click', function (e) {
+        e.preventDefault();
+        let container = $(this).closest('.modal');
+        container.addClass('modal--success')
+    })
+
+    //кнопка поиска в хедере
+    $('.header-search-submit').on('click', function (e) {
+        e.preventDefault();
+        let container = $(this).closest('.header-search');
+        container.find('.search-submit').click();
+    })
 
 })

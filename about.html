@@ -20,6 +20,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="./assets/plagins/modal/jquery.arcticmodal-0.3.css">
     <link rel="stylesheet" href="./assets/plagins/swiper/swiper.css">
+    <link rel="stylesheet" href="./assets/plagins/fancybox/jquery.fancybox.min.css">
     <link rel="stylesheet" href="./assets/style.css">
     <title>АмурАзияСпецдеталь</title>
 </head>
@@ -184,7 +185,7 @@
                     <div class="custom-input">
                         <input type="text" class="custom-input__field" placeholder="Поиск товаров">
                         <input type="submit" class="search-submit">
-<a href="#" class="header-search-submit">
+                        <a href="#" class="header-search-submit">
                             <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -243,54 +244,65 @@
         </div>
     </header>
     <main class="main">
-        <section class="main-page">
-            <section class="hero">
-                <img src="./assets/images/track.png" alt="" class="hero-track">
-                <div class="hero__container container">
-                    <div class="hero-info">
-                        <h1 class="hero__title">
-                            <span> Широкий ассортимент </span>кабин для погрузчиков, автокранов и другой спецтехники с
-                            гарантией качества
-                        </h1>
-                        <div class="hero__desc">
-                            Благодаря прямому сотрудничеству с производителями, мы гарантируем низкую цену и поможем вам
-                            найти нужные запчасти даже для не очень распространенных моделей техники.
-                        </div>
-                        <a href="#" class="hero__button button button--circle">Оставить заявку</a>
-                        <div class="about-text">
-                            <div class="about-title title">О компании</div>
-                            <div class="about-desc">
-                                <p>
-                                    Наша компания <strong> «АмурАзияСпецдеталь» </strong>предлагает Вам поставку любых
-                                    запасных частей в
-                                    широком
-                                    ассортименте на спецтехнику китайского производства.
-                                </p>
-                                <p>
-                                    Вот уже более 10 лет мы поставляем на российский рынок запасные части на технику
-                                    самых
-                                    известных марок: HOWO, FAW, SHAANXI, FOTON, SHANTUI, XCMG, SANY, XCGMA, KOMATSU и
-                                    т.д.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="hero-line">
-                        <img src="./assets/images/hero-image.png" alt="" class="hero-image">
-                        <div class="count">
-                            <div class="count-title">Более</div>
-                            <div class="count-value">10</div>
-                            <div class="count-title">лет на рынке</div>
+        <section class="about-page">
+            <section class="about container">
+                <div class="about__container">
+                    <ul itemscope="" itemtype="http://schema.org/BreadcrumbList" class="breadcrumbs">
+                        <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"
+                            class="breadcrumbs__item">
+                            <a itemprop="item" href="/" class="breadcrumbs__item-link">
+                                <span itemprop="name" class="breadcrumbs__item-name">Главная</span>
+                                <meta itemprop="position" content="1">
+                            </a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <span class="breadcrumbs__item-link">О компании</span>
+                        </li>
+                    </ul>
+                    <div class="about-text">
+                        <div class="about-title title">О компании</div>
+                        <div class="about-desc">
+                            <p>
+                                Наша компания <strong> «АмурАзияСпецдеталь» </strong>предлагает Вам поставку любых
+                                запасных частей в
+                                широком
+                                ассортименте на спецтехнику китайского производства.
+                            </p>
+                            <p>
+                                Вот уже более 10 лет мы поставляем на российский рынок запасные части на технику
+                                самых
+                                известных марок: HOWO, FAW, SHAANXI, FOTON, SHANTUI, XCMG, SANY, XCGMA, KOMATSU и
+                                т.д.
+                            </p>
                         </div>
                     </div>
                 </div>
+                <div class="hero-line">
+                    <div class="count">
+                        <div class="count-title">Более</div>
+                        <div class="count-value">10</div>
+                        <div class="count-title">лет на рынке</div>
+                    </div>
+                </div>
+
             </section>
             <section class="advantages">
                 <div class="advantages__container container">
                     <div class="advantages__header">
                         <div class="advantages__header-items">
-                            <div class="advantages__title title">Наши <br> преимущества</div>
-                            <a href="about.html" class="advantages__button button button--circle">О компании</a>
+                            <div class="advantages__title title">Наши преимущества</div>
+                            <p>
+                                Мы имеем возможность поставки запасных частей крупными и мелкими партиями в любой регион
+                                России по Вашим запросам.
+                            </p>
+                            <p>
+                                А также мы предлагаем Вам решение любых вопросов связанных с поставками товаров
+                                китайского производства.
+                            </p>
+                            <p>
+                                Это не только запасные части к спец.технике из Китая, но и полный ассортимент
+                                производственных линий.
+                            </p>
                         </div>
                         <div class="advantages__line">
                             <div class="count count--w count--orange">
@@ -354,332 +366,19 @@
                     </div>
                 </div>
             </section>
-            <section class="popular">
-                <div class="popular__container container">
-                    <div class="popular__title title">Товары недели</div>
-                    <div class="product-preview">
-                        <img src="./assets/images/p1.jpg" alt="" class="product-preview__image">
-                        <div class="product-preview__info">
-                            <div class="product-preview__title">
-                                Колодка стояночного тормоза для грейдера CLG418ДЗ-122Б1
-                            </div>
-                            <div class="product-preview_availability">
-                                В наличии
-                            </div>
-                            <div class="product-preview__prices">
-                                <div class="product-preview__price">1 800 ₽</div>
-                                <div class="product-preview__old-price">3 000 ₽</div>
-                                <div class="product-preview__discount">-20%</div>
-                            </div>
-                            <div class="product-preview__options">
-                                <div class="product-preview__option">
-                                    <div class="product-preview__option-title">Производитель</div>
-                                    <div class="product-preview__option-value">LiuGong</div>
-                                </div>
-                                <div class="product-preview__option">
-                                    <div class="product-preview__option-title">Страна производитель</div>
-                                    <div class="product-preview__option-value">Китай</div>
-                                </div>
-                                <div class="product-preview__option">
-                                    <div class="product-preview__option-title">Модель грейдера</div>
-                                    <div class="product-preview__option-value">CLG418, ДЗ-122Б1</div>
-                                </div>
-                                <div class="product-preview__option">
-                                    <div class="product-preview__option-title">Тип запчасти</div>
-                                    <div class="product-preview__option-value">оригинал</div>
-                                </div>
-                                <a href="product.html"
-                                    class="product-preview__button button button--circle">Подробнее</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-preview">
-                        <img src="./assets/images/p2.jpg" alt="" class="product-preview__image">
-                        <div class="product-preview__info">
-                            <div class="product-preview__title">
-                                Колодка тормозная CHENGGONG
-                            </div>
-                            <div class="product-preview_availability product-preview_availability--false">
-                                Нет в наличии
-                            </div>
-                            <div class="product-preview__prices">
-                                <div class="product-preview__price">1 800 ₽</div>
-                                <div class="product-preview__old-price">3 000 ₽</div>
-                                <div class="product-preview__discount">-20%</div>
-                            </div>
-                            <div class="product-preview__options">
-                                <div class="product-preview__option">
-                                    <div class="product-preview__option-title">Производитель</div>
-                                    <div class="product-preview__option-value">LiuGong</div>
-                                </div>
-                                <div class="product-preview__option">
-                                    <div class="product-preview__option-title">Страна производитель</div>
-                                    <div class="product-preview__option-value">Китай</div>
-                                </div>
-                                <div class="product-preview__option">
-                                    <div class="product-preview__option-title">Модель грейдера</div>
-                                    <div class="product-preview__option-value">CLG418, ДЗ-122Б1</div>
-                                </div>
-                                <div class="product-preview__option">
-                                    <div class="product-preview__option-title">Тип запчасти</div>
-                                    <div class="product-preview__option-value">оригинал</div>
-                                </div>
-                                <a href="product.html"
-                                    class="product-preview__button button button--circle">Подробнее</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-preview">
-                        <img src="./assets/images/p2.jpg" alt="" class="product-preview__image">
-                        <div class="product-preview__info">
-                            <div class="product-preview__title">
-                                Колодка стояночного тормоза для грейдера CLG418ДЗ-122Б1
-                            </div>
-                            <div class="product-preview_availability">
-                                В наличии
-                            </div>
-                            <div class="product-preview__prices">
-                                <div class="product-preview__price">1 800 ₽</div>
-                                <div class="product-preview__old-price">3 000 ₽</div>
-                                <div class="product-preview__discount">-20%</div>
-                            </div>
-                            <div class="product-preview__options">
-                                <div class="product-preview__option">
-                                    <div class="product-preview__option-title">Производитель</div>
-                                    <div class="product-preview__option-value">LiuGong</div>
-                                </div>
-                                <div class="product-preview__option">
-                                    <div class="product-preview__option-title">Страна производитель</div>
-                                    <div class="product-preview__option-value">Китай</div>
-                                </div>
-                                <div class="product-preview__option">
-                                    <div class="product-preview__option-title">Модель грейдера</div>
-                                    <div class="product-preview__option-value">CLG418, ДЗ-122Б1</div>
-                                </div>
-                                <div class="product-preview__option">
-                                    <div class="product-preview__option-title">Тип запчасти</div>
-                                    <div class="product-preview__option-value">оригинал</div>
-                                </div>
-                                <a href="product.html"
-                                    class="product-preview__button button button--circle">Подробнее</a>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="#" class="popular__show-more button button--show-more">Показать больше</a>
-                </div>
-            </section>
-            <section class="category">
-                <div class="category__container container">
-                    <div class="category__title title">Запчасти</div>
-                    <div class="product-preview">
-                        <img src="./assets/images/p3.jpg" alt="" class="product-preview__image">
-                        <div class="product-preview__info">
-                            <div class="product-preview__title">
-                                Кабина faw j5 ЕВРО 2,3 (старая модель)
-                            </div>
-                            <div class="product-preview_availability">
-                                В наличии
-                            </div>
-                            <div class="product-preview__prices">
-                                <div class="product-preview__price-request">
-                                    Цена по запросу
-                                </div>
-                            </div>
-                            <div class="product-preview__options">
-                                <div class="product-preview__option">
-                                    <div class="product-preview__option-title">Производитель</div>
-                                    <div class="product-preview__option-value">LiuGong</div>
-                                </div>
-                                <div class="product-preview__option">
-                                    <div class="product-preview__option-title">Страна производитель</div>
-                                    <div class="product-preview__option-value">Китай</div>
-                                </div>
-                                <div class="product-preview__option">
-                                    <div class="product-preview__option-title">Модель грейдера</div>
-                                    <div class="product-preview__option-value">CLG418, ДЗ-122Б1</div>
-                                </div>
-                                <div class="product-preview__option">
-                                    <div class="product-preview__option-title">Тип запчасти</div>
-                                    <div class="product-preview__option-value">оригинал</div>
-                                </div>
-                                <a href="product.html"
-                                    class="product-preview__button button button--circle">Подробнее</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-preview">
-                        <img src="./assets/images/p4.jpg" alt="" class="product-preview__image">
-                        <div class="product-preview__info">
-                            <div class="product-preview__title">
-                                Кабина FOTON белая
-                            </div>
-                            <div class="product-preview_availability">
-                                В наличии
-                            </div>
-                            <div class="product-preview__prices">
-                                <div class="product-preview__price">от 490 000 ₽</div>
-                            </div>
-                            <div class="product-preview__options">
-                                <div class="product-preview__option">
-                                    <div class="product-preview__option-title">Производитель</div>
-                                    <div class="product-preview__option-value">LiuGong</div>
-                                </div>
-                                <div class="product-preview__option">
-                                    <div class="product-preview__option-title">Страна производитель</div>
-                                    <div class="product-preview__option-value">Китай</div>
-                                </div>
-                                <div class="product-preview__option">
-                                    <div class="product-preview__option-title">Модель грейдера</div>
-                                    <div class="product-preview__option-value">CLG418, ДЗ-122Б1</div>
-                                </div>
-                                <div class="product-preview__option">
-                                    <div class="product-preview__option-title">Тип запчасти</div>
-                                    <div class="product-preview__option-value">оригинал</div>
-                                </div>
-                                <a href="product.html"
-                                    class="product-preview__button button button--circle">Подробнее</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-preview">
-                        <img src="./assets/images/p3.jpg" alt="" class="product-preview__image">
-                        <div class="product-preview__info">
-                            <div class="product-preview__title">
-                                Кабина faw j5 ЕВРО 2,3 (старая модель)
-                            </div>
-                            <div class="product-preview_availability">
-                                В наличии
-                            </div>
-                            <div class="product-preview__prices">
-                                <div class="product-preview__price-request">
-                                    Цена по запросу
-                                </div>
-                            </div>
-                            <div class="product-preview__options">
-                                <div class="product-preview__option">
-                                    <div class="product-preview__option-title">Производитель</div>
-                                    <div class="product-preview__option-value">LiuGong</div>
-                                </div>
-                                <div class="product-preview__option">
-                                    <div class="product-preview__option-title">Страна производитель</div>
-                                    <div class="product-preview__option-value">Китай</div>
-                                </div>
-                                <div class="product-preview__option">
-                                    <div class="product-preview__option-title">Модель грейдера</div>
-                                    <div class="product-preview__option-value">CLG418, ДЗ-122Б1</div>
-                                </div>
-                                <div class="product-preview__option">
-                                    <div class="product-preview__option-title">Тип запчасти</div>
-                                    <div class="product-preview__option-value">оригинал</div>
-                                </div>
-                                <a href="product.html"
-                                    class="product-preview__button button button--circle">Подробнее</a>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="#" class="popular__show-more button button--show-more">Показать больше</a>
+            <section class="documents container">
+                <div class="documents__title title title--md">Сертификаты</div>
+                <div class="documents__items">
+                    <a href="./assets/images/doc1.jpg" data-fancybox="doc" class="documents__item">
+                        <img src="./assets/images/doc1.jpg" alt="" class="documents__item-image">
+                    </a>
+                    <a href="./assets/images/doc1.jpg" data-fancybox="doc" class="documents__item">
+                        <img src="./assets/images/doc1.jpg" alt="" class="documents__item-image">
+                    </a>
                 </div>
             </section>
             <section class="white-block">
                 <div class="container">
-                    <div class="parts">
-                        <div class="parts__title title">Запчасти для спецтехники</div>
-                        <div class="parts-slider-container">
-                            <div class="parts-slider swiper">
-                                <div class="swiper-wrapper">
-                                    <a href="category.html" class="parts-slide swiper-slide">
-                                        <div class="parts-slide__title">
-                                            Запчасти для автогрейдера
-                                        </div>
-                                        <img src="./assets/images/slide-link.svg" alt="" class="parts-slide__link">
-                                        <img src="./assets/images/s1.png" alt="" class="parts-slide__main-image">
-                                    </a>
-                                    <a href="category.html" class="parts-slide swiper-slide">
-                                        <div class="parts-slide__title">
-                                            Запчасти для автокрана
-                                        </div>
-                                        <img src="./assets/images/slide-link.svg" alt="" class="parts-slide__link">
-                                        <img src="./assets/images/s2.png" alt="" class="parts-slide__main-image">
-                                    </a>
-                                    <a href="category.html" class="parts-slide swiper-slide">
-                                        <div class="parts-slide__title">
-                                            Запчасти для бульдозера
-                                        </div>
-                                        <img src="./assets/images/slide-link.svg" alt="" class="parts-slide__link">
-                                        <img src="./assets/images/s3.png" alt="" class="parts-slide__main-image">
-                                    </a>
-                                    <a href="category.html" class="parts-slide swiper-slide">
-                                        <div class="parts-slide__title">
-                                            Запчасти для грунтового катка
-                                        </div>
-                                        <img src="./assets/images/slide-link.svg" alt="" class="parts-slide__link">
-                                        <img src="./assets/images/s4.png" alt="" class="parts-slide__main-image">
-                                    </a>
-                                    <a href="category.html" class="parts-slide swiper-slide">
-                                        <div class="parts-slide__title">
-                                            Запчасти для самосвала
-                                        </div>
-                                        <img src="./assets/images/slide-link.svg" alt="" class="parts-slide__link">
-                                        <img src="./assets/images/s5.png" alt="" class="parts-slide__main-image">
-                                    </a>
-                                    <a href="category.html" class="parts-slide swiper-slide">
-                                        <div class="parts-slide__title">
-                                            Запчасти для фронтального погрузчика
-                                        </div>
-                                        <img src="./assets/images/slide-link.svg" alt="" class="parts-slide__link">
-                                        <img src="./assets/images/s6.png" alt="" class="parts-slide__main-image">
-                                    </a>
-                                    <a href="category.html" class="parts-slide swiper-slide">
-                                        <div class="parts-slide__title">
-                                            Запчасти для экскаватора
-                                        </div>
-                                        <img src="./assets/images/slide-link.svg" alt="" class="parts-slide__link">
-                                        <img src="./assets/images/s7.png" alt="" class="parts-slide__main-image">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="arrows">
-                                <a href="#" class="arrow-link arrow-link--left">
-                                    <svg width="19" height="33" viewBox="0 0 19 33" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M17 2L2.5 16.5L17 31" stroke="#202027" stroke-width="3" />
-                                    </svg>
-                                </a>
-                                <a href="#" class="arrow-link arrow-link--right">
-                                    <svg width="19" height="33" viewBox="0 0 19 33" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M2 2L16.5 16.5L2 31" stroke="#202027" stroke-width="3" />
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <section class="news">
-                        <div class="news__title title">Последние статьи</div>
-                        <div class="news__items">
-                            <div class="news__item">
-                                <img src="./assets/images/n1.jpg" alt="" class="news__item-image">
-                                <div class="news__item-title">
-                                    Спецтехника XCMG: основные преимущества
-                                </div>
-                                <a href="post.html" class="link-more">Подробнее</a>
-                            </div>
-                            <div class="news__item">
-                                <img src="./assets/images/n2.jpg" alt="" class="news__item-image">
-                                <div class="news__item-title">
-                                    Стоит ли покупать грузовые автомобили FAW
-                                </div>
-                                <a href="post.html" class="link-more">Подробнее</a>
-                            </div>
-                            <div class="news__item">
-                                <img src="./assets/images/n3.jpg" alt="" class="news__item-image">
-                                <div class="news__item-title">
-                                    Двигатели Weichai — частые проблемы
-                                </div>
-                                <a href="post.html" class="link-more">Подробнее</a>
-                            </div>
-                        </div>
-                    </section>
                     <section class="seo-text">
                         <div class="seo-text__title title title--md">
                             Запчасти для спецтехники из Китая
@@ -900,8 +599,9 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="./assets/plagins/swiper/swiper.js"></script>
-    <script src="./assets/plagins/mask/jquery.maskedinput.js"></script>
     <script src="./assets/plagins/modal/jquery.arcticmodal-0.3.min.js"></script>
+    <script src="./assets/plagins/mask/jquery.maskedinput.js"></script>
+    <script src="./assets/plagins/fancybox/jquery.fancybox.min.js"></script>
     <script src="./assets/main.js"></script>
 </body>
 
