@@ -9,6 +9,23 @@ $(document).ready(function () {
             nextEl: ".arrow-link--right",
             prevEl: ".arrow-link--left",
         },
+        breakpoints: {
+            // when window width is >= 320px
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 0
+            },
+            // when window width is >= 769
+            769: {
+                slidesPerView: 3,
+                spaceBetween: 20
+            },
+            // when window width is >= 1366
+            1366: {
+                slidesPerView: 4,
+                spaceBetween: 20
+            }
+        }
     });
 
     //видеоплеер ютуб
@@ -95,6 +112,13 @@ $(document).ready(function () {
         e.preventDefault();
         let container = $(this).closest('.header-search');
         container.find('.search-submit').click();
+    })
+
+    //burger menu
+    $('.header__burger').on('click', function (e) {
+        e.preventDefault();
+        $(this).toggleClass('header__burger--active');
+        $('.header-mob__bottom').slideToggle()
     })
 
 })
