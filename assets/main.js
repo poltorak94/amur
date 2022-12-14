@@ -121,4 +121,11 @@ $(document).ready(function () {
         $('.header-mob__bottom').slideToggle()
     })
 
+    $('.header-catalog-item-submenu-link').on('click', function (e) {
+        e.preventDefault();
+        $(this).toggleClass('rotate-link')
+        let container = $(this).closest('.header-catalog-item');
+        container.find('.header-catalog-submenu').slideToggle()
+    })
+
 })
