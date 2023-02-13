@@ -1,13 +1,13 @@
 $(document).ready(function () {
 
-    //слайдер на главной
+    //слайдер запчасти 
     var swiper = new Swiper(".parts-slider", {
         slidesPerView: 4,
         spaceBetween: 20,
         loop: true,
         navigation: {
-            nextEl: ".arrow-link--right",
-            prevEl: ".arrow-link--left",
+            nextEl: ".parts .arrow-link--right",
+            prevEl: ".parts .arrow-link--left",
         },
         breakpoints: {
             // when window width is >= 320px
@@ -27,6 +27,64 @@ $(document).ready(function () {
             }
         }
     });
+
+    //слайдер карточка товара
+    var productSwiper = new Swiper(".product-slider", {
+        loop: true,
+        navigation: {
+            nextEl: ".product-slider .arrow-right",
+            prevEl: ".product-slider .arrow-left",
+        },
+        pagination: {
+            el: ".product-slider .swiper-pagination",
+            clickable: true,
+        },
+    });
+
+    //слайдер бренды
+    var brands = new Swiper(".brands-slider", {
+        slidesPerView: 5,
+        spaceBetween: 20,
+        loop: true,
+        navigation: {
+            nextEl: ".brands .arrow-link--right",
+            prevEl: ".brands .arrow-link--left",
+        },
+        breakpoints: {
+            // when window width is >= 320px
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 0
+            },
+            // when window width is >= 769
+            769: {
+                slidesPerView: 3,
+                spaceBetween: 20
+            },
+            // when window width is >= 1366
+            1366: {
+                slidesPerView: 5,
+                spaceBetween: 20
+            }
+        }
+    });
+    //слайдер баннеры 
+
+    //добавил опции
+    var banner = new Swiper(".hero-slider", {
+        loop: true,
+        autoHeight: true,
+        spaceBetween: 30,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".arrow-right",
+            prevEl: ".arrow-left",
+        },
+    });
+
 
     //видеоплеер ютуб
     $('.video-item__play').on('click', function (e) {
@@ -128,4 +186,11 @@ $(document).ready(function () {
         container.find('.header-catalog-submenu').slideToggle()
     })
 
+    //фильтр
+    $('.select').each(function () {
+        let select = $(this);
+        select.find('.select__field').select2({
+            minimumResultsForSearch: -1,
+        });
+    });
 })

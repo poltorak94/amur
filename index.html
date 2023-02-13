@@ -25,10 +25,12 @@
 </head>
 
 <body>
+    <!-- вынесен пункт меню бренды из выпадающего меню в главное, на моб и десктопе -->
     <header class="header">
         <div class="header-top">
             <div class="header-top__container container">
                 <nav class="header-nav">
+                    <a href="#" class="nav-item">Бренды</a>
                     <a href="about.html" class="nav-item">О компании</a>
                     <a href="delivery.html" class="nav-item">Оплата и доставка</a>
                     <a href="video.html" class="nav-item">Видео</a>
@@ -51,13 +53,6 @@
                     <a href="#" class="header-catalog-button button">Каталог</a>
                     <div class="header-catalog-container">
                         <ul class="header-catalog-inner">
-                            <li class="header-catalog-item">
-                                <a href="#" class="header-catalog-item-link">Бренды</a>
-                                <svg width="8" height="12" viewBox="0 0 8 12" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1 11L6 6L1 1" stroke="white" stroke-opacity="0.1" stroke-width="2" />
-                                </svg>
-                            </li>
                             <li class="header-catalog-item">
                                 <a href="#" class="header-catalog-item-link">Гидравлические насосы</a>
                                 <svg width="8" height="12" viewBox="0 0 8 12" fill="none"
@@ -281,6 +276,7 @@
                         </div>
                     </form>
                     <nav class="header-nav">
+                        <a href="#" class="nav-item">О компании</a>
                         <a href="about.html" class="nav-item">О компании</a>
                         <a href="delivery.html" class="nav-item">Оплата и доставка</a>
                         <a href="video.html" class="nav-item">Видео</a>
@@ -290,13 +286,6 @@
                     </nav>
                     <div class="header-catalog-container">
                         <ul class="header-catalog-inner">
-                            <li class="header-catalog-item">
-                                <a href="#" class="header-catalog-item-link">Бренды</a>
-                                <svg width="8" height="12" viewBox="0 0 8 12" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1 11L6 6L1 1" stroke="white" stroke-opacity="0.1" stroke-width="2" />
-                                </svg>
-                            </li>
                             <li class="header-catalog-item header-catalog-item--sub">
                                 <a href="#" class="header-catalog-item-link">Гидравлические насосы</a>
                                 <a href="#" class="header-catalog-item-submenu-link">
@@ -479,39 +468,84 @@
     </header>
     <main class="main">
         <section class="main-page">
+            <!-- изменение слайдера, изменение текста, добавление классов span для заголовков, добавление картинок -->
             <section class="hero">
-                <img src="./assets/images/track.png" alt="" class="hero-track">
-                <div class="hero__container container">
-                    <div class="hero-info">
-                        <h1 class="hero__title">
-                            <span> Широкий ассортимент </span>кабин для погрузчиков, автокранов и другой спецтехники с
-                            гарантией качества
-                        </h1>
-                        <div class="hero__desc">
-                            Благодаря прямому сотрудничеству с производителями, мы гарантируем низкую цену и поможем вам
-                            найти нужные запчасти даже для не очень распространенных моделей техники.
-                        </div>
-                        <a href="#" class="hero__button button button--circle">Оставить заявку</a>
-                        <div class="about-text">
-                            <div class="about-title title">О компании</div>
-                            <div class="about-desc">
-                                <p>
-                                    Наша компания <strong> «АмурАзияСпецдеталь» </strong>предлагает Вам поставку любых
-                                    запасных частей в
-                                    широком
-                                    ассортименте на спецтехнику китайского производства.
-                                </p>
-                                <p>
-                                    Вот уже более 10 лет мы поставляем на российский рынок запасные части на технику
-                                    самых
-                                    известных марок: HOWO, FAW, SHAANXI, FOTON, SHANTUI, XCMG, SANY, XCGMA, KOMATSU и
-                                    т.д.
-                                </p>
+                <div class="hero-slider-container container">
+                    <div class="hero-slider swiper">
+                        <div class="swiper-wrapper">
+                            <div class="hero-slide hero__container swiper-slide">
+                                <div class="hero-info">
+                                    <div class="hero__title">
+                                        <span class="text-orange"> Широкий ассортимент</span> <br>
+                                        кабин FAW J6, FOTON, SITRAK, HOWO, Shaanxi
+                                    </div>
+                                    <div class="hero__desc">
+                                        Кабины в наличии и под заказ по приемлемым ценам. <br>
+                                        <span> С нами выгодно и удобно!</span>
+                                    </div>
+                                    <a href="#" class="hero__button button button--circle">Оставить заявку</a>
+                                </div>
+                                <img src="./assets/images/track1.png" alt="" class="hero-line__3d">
+                                <div class="hero-line">
+                                    <img src="./assets/images/hero-image.png" alt="" class="hero-image">
+                                </div>
+                            </div>
+                            <div class="hero-slide hero__container swiper-slide">
+                                <div class="hero-info">
+                                    <div class="hero__title">
+                                        <span class="text-gray"> колодки и суппорта на китайские погрузчики:</span>
+                                        XGMA, Faw,
+                                        Longkong, SDLG, XCMG, Liugong, Chenggong <span class="text-orange"> в наличии
+                                        </span>
+                                    </div>
+                                    <a href="#" class="hero__button button button--circle">Оставить заявку</a>
+                                </div>
+                                <img src="./assets/images/track2.png" alt="" class="hero-line__3d">
+                                <div class="hero-line">
+                                    <img src="./assets/images/hero-image2.jpg" alt="" class="hero-image">
+                                </div>
                             </div>
                         </div>
+                        <div class="swiper-nav-container">
+                            <a href="#" class="arrow-left">
+                                <svg width="19" height="19" viewBox="0 0 19 19" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M9.48528 7.03335e-05V16.9706M9.48528 16.9706L17.9706 8.48535M9.48528 16.9706L1 8.48535"
+                                        stroke="#575768" stroke-width="2" />
+                                </svg>
+                            </a>
+                            <div class="swiper-pagination"></div>
+                            <a href="#" class="arrow-right">
+                                <svg width="19" height="19" viewBox="0 0 19 19" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M9.48528 7.03335e-05V16.9706M9.48528 16.9706L17.9706 8.48535M9.48528 16.9706L1 8.48535"
+                                        stroke="#575768" stroke-width="2" />
+                                </svg>
+                            </a>
+                        </div>
                     </div>
-                    <div class="hero-line">
-                        <img src="./assets/images/hero-image.png" alt="" class="hero-image">
+                </div>
+                <div class="hero-about container">
+                    <div class="about-text">
+                        <div class="about-title title">О компании</div>
+                        <div class="about-desc">
+                            <p>
+                                Наша компания <strong> «АмурАзияСпецдеталь» </strong>предлагает Вам поставку любых
+                                запасных частей в
+                                широком
+                                ассортименте на спецтехнику китайского производства.
+                            </p>
+                            <p>
+                                Вот уже более 10 лет мы поставляем на российский рынок запасные части на технику
+                                самых
+                                известных марок: HOWO, FAW, SHAANXI, FOTON, SHANTUI, XCMG, SANY, XCGMA, KOMATSU и
+                                т.д.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="hero-line hero-line--about">
                         <div class="count">
                             <div class="count-title">Более</div>
                             <div class="count-value">10</div>
@@ -519,6 +553,7 @@
                         </div>
                     </div>
                 </div>
+
             </section>
             <section class="advantages">
                 <div class="advantages__container container">
@@ -817,6 +852,44 @@
             </section>
             <section class="white-block">
                 <div class="container">
+                    <div class="brands">
+                        <div class="brands__title title">Бренды</div>
+                        <div class="brands-slider-container">
+                            <div class="brands-slider swiper">
+                                <div class="swiper-wrapper">
+                                    <a href="#" target="_blank" class="brands__slide swiper-slide">
+                                        <img src="./assets/images/brand1.png" alt="" class="brands__slide-icon">
+                                    </a>
+                                    <a href="#" target="_blank" class="brands__slide swiper-slide">
+                                        <img src="./assets/images/brand2.png" alt="" class="brands__slide-icon">
+                                    </a>
+                                    <a href="#" target="_blank" class="brands__slide swiper-slide">
+                                        <img src="./assets/images/brand3.png" alt="" class="brands__slide-icon">
+                                    </a>
+                                    <a href="#" target="_blank" class="brands__slide swiper-slide">
+                                        <img src="./assets/images/brand4.png" alt="" class="brands__slide-icon">
+                                    </a>
+                                    <a href="#" target="_blank" class="brands__slide swiper-slide">
+                                        <img src="./assets/images/brand5.png" alt="" class="brands__slide-icon">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="arrows">
+                                <a href="#" class="arrow-link arrow-link--left">
+                                    <svg width="19" height="33" viewBox="0 0 19 33" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M17 2L2.5 16.5L17 31" stroke="#202027" stroke-width="3" />
+                                    </svg>
+                                </a>
+                                <a href="#" class="arrow-link arrow-link--right">
+                                    <svg width="19" height="33" viewBox="0 0 19 33" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2 2L16.5 16.5L2 31" stroke="#202027" stroke-width="3" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                     <div class="parts">
                         <div class="parts__title title">Запчасти для спецтехники</div>
                         <div class="parts-slider-container">
@@ -892,27 +965,27 @@
                     <section class="news">
                         <div class="news__title title">Последние статьи</div>
                         <div class="news__items">
-                            <div class="news__item">
+                            <a href="post.html" class="news__item">
                                 <img src="./assets/images/n1.jpg" alt="" class="news__item-image">
                                 <div class="news__item-title">
                                     Спецтехника XCMG: основные преимущества
                                 </div>
-                                <a href="post.html" class="link-more">Подробнее</a>
-                            </div>
-                            <div class="news__item">
+                                <div class="link-more">Подробнее</div>
+                            </a>
+                            <a href="post.html" class="news__item">
                                 <img src="./assets/images/n2.jpg" alt="" class="news__item-image">
                                 <div class="news__item-title">
                                     Стоит ли покупать грузовые автомобили FAW
                                 </div>
-                                <a href="post.html" class="link-more">Подробнее</a>
-                            </div>
-                            <div class="news__item">
+                                <div class="link-more">Подробнее</div>
+                            </a>
+                            <a href="post.html" class="news__item">
                                 <img src="./assets/images/n3.jpg" alt="" class="news__item-image">
                                 <div class="news__item-title">
                                     Двигатели Weichai — частые проблемы
                                 </div>
-                                <a href="post.html" class="link-more">Подробнее</a>
-                            </div>
+                                <div class="link-more">Подробнее</div>
+                            </a>
                         </div>
                     </section>
                     <section class="seo-text">

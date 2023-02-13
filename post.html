@@ -25,10 +25,12 @@
 </head>
 
 <body>
+    <!-- вынесен пункт меню бренды из выпадающего меню в главное, на моб и десктопе -->
     <header class="header">
         <div class="header-top">
             <div class="header-top__container container">
                 <nav class="header-nav">
+                    <a href="#" class="nav-item">Бренды</a>
                     <a href="about.html" class="nav-item">О компании</a>
                     <a href="delivery.html" class="nav-item">Оплата и доставка</a>
                     <a href="video.html" class="nav-item">Видео</a>
@@ -51,13 +53,6 @@
                     <a href="#" class="header-catalog-button button">Каталог</a>
                     <div class="header-catalog-container">
                         <ul class="header-catalog-inner">
-                            <li class="header-catalog-item">
-                                <a href="#" class="header-catalog-item-link">Бренды</a>
-                                <svg width="8" height="12" viewBox="0 0 8 12" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1 11L6 6L1 1" stroke="white" stroke-opacity="0.1" stroke-width="2" />
-                                </svg>
-                            </li>
                             <li class="header-catalog-item">
                                 <a href="#" class="header-catalog-item-link">Гидравлические насосы</a>
                                 <svg width="8" height="12" viewBox="0 0 8 12" fill="none"
@@ -281,6 +276,7 @@
                         </div>
                     </form>
                     <nav class="header-nav">
+                        <a href="#" class="nav-item">О компании</a>
                         <a href="about.html" class="nav-item">О компании</a>
                         <a href="delivery.html" class="nav-item">Оплата и доставка</a>
                         <a href="video.html" class="nav-item">Видео</a>
@@ -290,13 +286,6 @@
                     </nav>
                     <div class="header-catalog-container">
                         <ul class="header-catalog-inner">
-                            <li class="header-catalog-item">
-                                <a href="#" class="header-catalog-item-link">Бренды</a>
-                                <svg width="8" height="12" viewBox="0 0 8 12" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1 11L6 6L1 1" stroke="white" stroke-opacity="0.1" stroke-width="2" />
-                                </svg>
-                            </li>
                             <li class="header-catalog-item header-catalog-item--sub">
                                 <a href="#" class="header-catalog-item-link">Гидравлические насосы</a>
                                 <a href="#" class="header-catalog-item-submenu-link">
@@ -590,27 +579,27 @@
                 <section class="news">
                     <div class="news__title title">Похожие статьи</div>
                     <div class="news__items">
-                        <div class="news__item">
+                        <a href="post.html" class="news__item">
                             <img src="./assets/images/n1.jpg" alt="" class="news__item-image">
                             <div class="news__item-title">
                                 Спецтехника XCMG: основные преимущества
                             </div>
-                            <a href="post.html" class="link-more">Подробнее</a>
-                        </div>
-                        <div class="news__item">
+                            <div class="link-more">Подробнее</div>
+                        </a>
+                        <a href="post.html" class="news__item">
                             <img src="./assets/images/n2.jpg" alt="" class="news__item-image">
                             <div class="news__item-title">
                                 Стоит ли покупать грузовые автомобили FAW
                             </div>
-                            <a href="post.html" class="link-more">Подробнее</a>
-                        </div>
-                        <div class="news__item">
+                            <div class="link-more">Подробнее</div>
+                        </a>
+                        <a href="post.html" class="news__item">
                             <img src="./assets/images/n3.jpg" alt="" class="news__item-image">
                             <div class="news__item-title">
                                 Двигатели Weichai — частые проблемы
                             </div>
-                            <a href="post.html" class="link-more">Подробнее</a>
-                        </div>
+                            <div class="link-more">Подробнее</div>
+                        </a>
                     </div>
                 </section>
             </div>
