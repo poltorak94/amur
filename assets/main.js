@@ -32,8 +32,8 @@ $(document).ready(function () {
     var productSwiper = new Swiper(".product-slider", {
         loop: true,
         navigation: {
-            nextEl: ".product-slider .arrow-right",
-            prevEl: ".product-slider .arrow-left",
+            nextEl: ".product-slider__container .arrow-right",
+            prevEl: ".product-slider__container .arrow-left",
         },
         pagination: {
             el: ".product-slider .swiper-pagination",
